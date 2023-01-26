@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt lev3_1: Mehrwertsteuer-Rechner</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Mehrwertsteuer-Rechner</h1>
+        <form onsubmit="return false">
+            <fieldset>
+                <section>
+                    <p>Was soll benrechnet werden?</p>
+                    <label for="nettoBrutto">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
+                    <input type="radio" name="nettoBrutto" id="nettoBrutto" onchange="nettoToBrutto()">
+                    <label for="bruttoNetto">Mehrwertsteuer abziehen</label>
+                    <input type="radio" name="nettoBrutto" id="bruttoNetto" onchange="bruttoToNetto()">
+                </section>
+                <section>
+                    <p>Mehrwertsteuersatz</p>
+                    <label for="mwst">19%</label>
+                    <input type="radio" name="mwst" id="mwst19">
+                    <label for="mwst">7%</label>
+                    <input type="radio" name="mwst" id="mwst7">
+                </section>
+                <section>
+                    <label for="nettoBetrag" id="labelChange">test</label>
+                    <input type="text" name="nettoBetrag" id="nettoBetrag" required>
+                </section>
+                <input id="submit" type="button" value="Berechnen" onclick="calculate()">
+                <hr>
+                <h2>Ergebnis</h2>
+                <section>
+                    <p>Mehrwertsteuerbetrag</p>
+                    <p id="mwstResult"></p>
+                </section>
+                <section>
+                    <p id="resultText"></p>
+                    <p id="bruttoResult"></p>
+                </section>
+            </fieldset>
+        </form>
+    </main>
+    
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
