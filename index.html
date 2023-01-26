@@ -15,23 +15,25 @@
             <fieldset>
                 <section>
                     <p>Was soll benrechnet werden?</p>
-                    <label for="nettoBrutto">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
-                    <input type="radio" name="nettoBrutto" id="nettoBrutto" onchange="nettoToBrutto()">
-                    <label for="bruttoNetto">Mehrwertsteuer abziehen</label>
-                    <input type="radio" name="nettoBrutto" id="bruttoNetto" onchange="bruttoToNetto()">
+                    <label for="nettoBrutto">Mehrwertsteuer aufschlagen (Netto zu Brutto)
+                        <input type="radio" name="nettoBrutto" id="nettoBrutto" onchange="nettoToBrutto()" required>
+                    </label>
+                    <label for="bruttoNetto">Mehrwertsteuer abziehen
+                        <input type="radio" name="nettoBrutto" id="bruttoNetto" onchange="bruttoToNetto()">
+                    </label>
                 </section>
                 <section>
                     <p>Mehrwertsteuersatz</p>
-                    <label for="mwst">19%</label>
-                    <input type="radio" name="mwst" id="mwst19">
-                    <label for="mwst">7%</label>
-                    <input type="radio" name="mwst" id="mwst7">
+                    <label for="mwst">19%
+                        <input type="radio" name="mwst" id="mwst19" required>
+                    </label>
+                    <label for="mwst">7%
+                        <input type="radio" name="mwst" id="mwst7">
+                    </label>
                 </section>
-                <section>
                     <label for="nettoBetrag" id="labelChange"></label>
-                    <input type="text" name="nettoBetrag" id="nettoBetrag" required>
-                </section>
-                <input id="submit" type="button" value="Berechnen" onclick="calculate()">
+                        <input type="text" name="nettoBetrag" id="nettoBetrag" required>
+                <input id="submit" type="submit" value="Berechnen" onclick="calculate()">
                 <hr>
                 <h2>Ergebnis</h2>
                 <section>

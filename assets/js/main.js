@@ -51,13 +51,13 @@ const calculate = () => {
     mwstResult.innerHTML = output1.toFixed(2);
     bruttoResult.innerHTML = output2.toFixed(2); */
     let x = "";
-    if( mwst19.checked === true ){
+    if(mwst19.checked === true ){
         x = 1.19 ;
     }
-    else{
+    else {
         x = 1.07 ;
     }
-    
+
     if (bruttoNetto.checked === true){
         output1 = input - (input / x);
         output2 = input / x ;
