@@ -28,31 +28,47 @@ const bruttoToNetto = () =>{
 const calculate = () => {
     let input = Number(nettoBetrag.value);
 
-    if(nettoBrutto.checked === true && mwst19.checked === true){
-        let output1 = input * 0.19;
-        let output2 = output1 + input;
-        mwstResult.innerHTML = output1.toFixed(2);
-        bruttoResult.innerHTML = output2.toFixed(2);
+    let output1 = "";
+    let output2 = "";
+
+/*     if(nettoBrutto.checked === true && mwst19.checked === true){
+        output1 = input * 0.19;
+        output2 = output1 + input;
     }
     else if(nettoBrutto.checked === true && mwst7.checked === true){
-        let output1 = input * 0.07;
-        let output2 = output1 + input;
-        mwstResult.innerHTML = output1.toFixed(2);
-        bruttoResult.innerHTML = output2.toFixed(2);
+        output1 = input * 0.07;
+        output2 = output1 + input;
     }
     else if (bruttoNetto.checked === true && mwst19.checked === true){
-        let output1 = input -(input / 1.19);
-        let output2 = input / 1.19;
-        mwstResult.innerHTML = output1.toFixed(2);
-        bruttoResult.innerHTML = output2.toFixed(2);
+        output1 = input -(input / 1.19);
+        output2 = input / 1.19;
     }
     else if (bruttoNetto.checked === true && mwst7.checked === true){
-        let output1 = input - (input / 1.07);
-        let output2 = input / 1.07 ;
-        mwstResult.innerHTML = output1.toFixed(2);
-        bruttoResult.innerHTML = output2.toFixed(2);
+        output1 = input - (input / 1.07);
+        output2 = input / 1.07 ;
     }
     else{}
+    mwstResult.innerHTML = output1.toFixed(2);
+    bruttoResult.innerHTML = output2.toFixed(2); */
+    let x = "";
+    if( mwst19.checked === true ){
+        x = 1.19 ;
+    }
+    else{
+        x = 1.07 ;
+    }
+    
+    if (bruttoNetto.checked === true){
+        output1 = input - (input / x);
+        output2 = input / x ;
+    }
+    else{
+        output1 = input * (x-1);
+        output2 = output1 + input;
+    }
+
+    mwstResult.innerHTML = output1.toFixed(2);
+    bruttoResult.innerHTML = output2.toFixed(2);
 }
 
 
