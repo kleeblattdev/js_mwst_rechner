@@ -31,28 +31,24 @@ const calculate = () => {
     if(nettoBrutto.checked === true && mwst19.checked === true){
         let output1 = input * 0.19;
         let output2 = output1 + input;
-        console.log('test');
         mwstResult.innerHTML = output1.toFixed(2);
         bruttoResult.innerHTML = output2.toFixed(2);
     }
     else if(nettoBrutto.checked === true && mwst7.checked === true){
         let output1 = input * 0.07;
         let output2 = output1 + input;
-        
         mwstResult.innerHTML = output1.toFixed(2);
         bruttoResult.innerHTML = output2.toFixed(2);
     }
     else if (bruttoNetto.checked === true && mwst19.checked === true){
         let output1 = input -(input / 1.19);
         let output2 = input / 1.19;
-
         mwstResult.innerHTML = output1.toFixed(2);
         bruttoResult.innerHTML = output2.toFixed(2);
     }
     else if (bruttoNetto.checked === true && mwst7.checked === true){
         let output1 = input - (input / 1.07);
         let output2 = input / 1.07 ;
-    
         mwstResult.innerHTML = output1.toFixed(2);
         bruttoResult.innerHTML = output2.toFixed(2);
     }

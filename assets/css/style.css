@@ -15,3 +15,7 @@ section{
     padding: 1rem;
 }
 
+#labelChange::after{
+    content: "*";
+    color: red;
+}
